@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="첨단주식회사 - 더 나은 내일을 만드는 기술과 혁신">
+<title>첨단주식회사 | 더 나은 내일을 만드는 기술</title>
+<style>
+:root{--bg:#080b12;--panel:#111722;--gold:#d8b66b;--gold2:#f0d99e;--ink:#f5f6f8;--muted:#aab3c1;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Pretendard,"Noto Sans KR",Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(8,11,18,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em}.mark{width:38px;height:38px;display:grid;place-items:center;color:#10131a;background:linear-gradient(135deg,var(--gold2),#a87b2d);clip-path:polygon(50% 0,100% 100%,68% 100%,50% 54%,31% 100%,0 100%);font-size:0}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.2em;font-weight:600;margin-top:-3px}
+nav{display:flex;gap:30px;color:#d4d9e1;font-size:13px}nav a:hover{color:var(--gold2)}.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:9px;padding:8px 12px}
+.hero{position:relative;overflow:hidden;padding:112px 0 105px;background:radial-gradient(ellipse at 82% 25%,rgba(191,148,67,.18),transparent 35%),linear-gradient(120deg,#0a0e17,#111927 65%,#0b1019)}
+.hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(216,182,107,.18);border-radius:50%;right:-120px;top:-150px;box-shadow:0 0 0 55px rgba(216,182,107,.025),0 0 0 110px rgba(216,182,107,.02)}
+.eyebrow{color:var(--gold2);font-size:12px;letter-spacing:.22em;font-weight:700}.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.15;letter-spacing:-.055em;margin:22px 0 20px;max-width:720px}.hero h1 span{color:var(--gold2)}.hero p{color:#bdc5d1;max-width:560px;font-size:17px;margin:0 0 34px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:7px;font-size:13px;font-weight:800;border:1px solid var(--line)}.btn.primary{background:linear-gradient(135deg,var(--gold2),#b78b42);color:#14171d;border:0}.btn:hover{transform:translateY(-2px)}
+.hero-note{position:relative;z-index:1;margin-top:76px;color:#778394;font-size:11px;letter-spacing:.12em}
+section{padding:92px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:38px}.kicker{color:var(--gold);font-size:11px;letter-spacing:.2em;font-weight:800}.section-top h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.045em;margin:9px 0 0}.section-top p{color:var(--muted);max-width:430px;margin:0;font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about-art{min-height:350px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(216,182,107,.12),transparent 50%),linear-gradient(35deg,#141c29,#0b1019);display:grid;place-items:center;position:relative;overflow:hidden}.about-art:before,.about-art:after{content:"";position:absolute;border:1px solid rgba(216,182,107,.32);transform:rotate(35deg);width:260px;height:380px;border-radius:48%}.about-art:after{width:180px;height:300px;transform:rotate(-35deg)}.bigmark{font-size:140px;font-weight:900;color:rgba(240,217,158,.82);z-index:1;letter-spacing:-.12em}.about-copy h3{font-size:27px;line-height:1.4;letter-spacing:-.04em;margin:0 0 18px}.about-copy p{color:var(--muted);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:28px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));min-height:210px}.num{color:var(--gold);font-size:12px;letter-spacing:.12em}.card h3{font-size:19px;margin:22px 0 8px}.card p{color:var(--muted);font-size:13px;margin:0}
+.banner{padding:54px;border-radius:18px;background:linear-gradient(110deg,#202b3a,#111824);border:1px solid rgba(216,182,107,.25);display:flex;align-items:center;justify-content:space-between;gap:25px}.banner h2{font-size:clamp(25px,4vw,38px);margin:8px 0;letter-spacing:-.04em}.banner p{color:var(--muted);margin:0;font-size:14px}
+.contact{background:#0c111a}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact-list{display:grid;gap:14px}.contact-item{padding:18px 20px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.025)}.contact-item small{display:block;color:var(--gold);font-size:10px;letter-spacing:.14em}.contact-item strong{font-size:16px;font-weight:600}.contact-side{color:var(--muted);font-size:14px;align-self:center}.contact-side strong{color:white;font-size:21px;display:block;margin-bottom:12px}
+footer{border-top:1px solid var(--line);padding:27px 0;color:#778394;font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:760px){nav{display:none;position:absolute;top:78px;left:0;right:0;background:#0b1019;padding:18px 22px 24px;flex-direction:column;gap:18px;border-bottom:1px solid var(--line)}nav.open{display:flex}.menu{display:block}.hero{padding:82px 0 70px}.hero:after{right:-350px}.hero-note{margin-top:52px}.section-top{display:block}.section-top p{margin-top:14px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:25px}.about-art{min-height:260px}.cards{grid-template-columns:1fr}.card{min-height:unset}.banner{padding:30px;display:block}.banner .btn{margin-top:22px}section{padding:68px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="mark">A</span><span>첨단주식회사<small>CHAMDAN CO., LTD.</small></span></a>
+<nav id="nav"><a href="#about">회사소개</a><a href="#business">사업분야</a><a href="#vision">비전</a><a href="#contact">문의하기</a></nav>
+<button class="menu" id="menu" aria-label="메뉴 열기">메뉴 ☰</button>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div class="eyebrow">INNOVATION · TECHNOLOGY · TRUST</div>
+<h1>더 나은 내일을 만드는<br><span>기술과 혁신</span></h1>
+<p>첨단주식회사는 고객의 가능성을 현실로 연결하는 파트너를 지향합니다. 새로운 관점과 책임 있는 실행으로 지속 가능한 가치를 만들어갑니다.</p>
+<div class="actions"><a class="btn primary" href="#about">회사 알아보기 ↗</a><a class="btn" href="#contact">문의하기</a></div>
+<div class="hero-note">THINK BEYOND · BUILD THE FUTURE</div>
+</div></section>
+<section id="about"><div class="wrap">
+<div class="section-top"><div><div class="kicker">ABOUT US</div><h2>신뢰를 바탕으로,<br>가능성을 현실로</h2></div><p>기술의 변화 속에서도 변하지 않는 기준은 고객에 대한 책임과 약속입니다.</p></div>
+<div class="about-grid"><div class="about-art"><div class="bigmark">A</div></div><div class="about-copy"><h3>작은 차이가 큰 변화를 만듭니다.</h3><p>첨단주식회사는 전문성과 유연한 사고를 바탕으로 고객과 함께 성장하는 기업을 목표로 합니다. 문제를 정확히 이해하고, 실질적인 해법을 제안하며, 결과로 신뢰를 쌓겠습니다.</p><p>※ 회사 연혁, 대표 인사말, 실제 사업 실적 및 인증 정보는 확정된 자료로 교체해 주세요.</p></div></div>
+</div></section>
+<section id="business" style="background:#0b1018"><div class="wrap">
+<div class="section-top"><div><div class="kicker">WHAT WE DO</div><h2>가치를 만드는 핵심 역량</h2></div><p>아래 사업분야는 홈페이지 시안용 예시입니다. 실제 사업 내용에 맞게 수정할 수 있습니다.</p></div>
+<div class="cards">
+<article class="card"><div class="num">01 / SOLUTION</div><h3>기술 솔루션</h3><p>고객의 과제를 분석하고 목적에 맞는 실용적인 기술 방향을 제안합니다.</p></article>
+<article class="card"><div class="num">02 / SYSTEM</div><h3>시스템 구축</h3><p>업무 환경과 요구사항을 고려해 효율적인 시스템과 운영 기반을 설계합니다.</p></article>
+<article class="card"><div class="num">03 / CONSULTING</div><h3>전문 컨설팅</h3><p>현황 진단부터 실행 계획까지, 더 나은 의사결정을 위한 인사이트를 제공합니다.</p></article>
+</div></div></section>
+<section id="vision"><div class="wrap"><div class="banner"><div><div class="kicker">OUR VISION</div><h2>오늘의 가능성을 내일의 표준으로</h2><p>지속적인 개선과 책임 있는 파트너십으로 더 큰 가치를 만듭니다.</p></div><a class="btn primary" href="#contact">함께 시작하기 ↗</a></div></div></section>
+<section class="contact" id="contact"><div class="wrap">
+<div class="section-top"><div><div class="kicker">CONTACT</div><h2>새로운 기회를 함께 이야기해요</h2></div><p>협업 및 문의 사항을 남겨주시면 담당자가 확인 후 연락드릴 수 있도록 안내하겠습니다.</p></div>
+<div class="contact-grid"><div class="contact-list">
+<div class="contact-item"><small>PHONE</small><strong><a href="tel:01011111111">010-1111-1111</a></strong></div>
+<div class="contact-item"><small>EMAIL</small><strong>이메일 주소를 입력해 주세요</strong></div>
+<div class="contact-item"><small>ADDRESS</small><strong>회사 주소를 입력해 주세요</strong></div>
+</div><div class="contact-side"><strong>첨단주식회사</strong>CHAMDAN CO., LTD.<br>운영시간 및 문의 담당자 정보를 추가하면 고객이 더 쉽게 연락할 수 있습니다.</div></div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 첨단주식회사. All rights reserved.</span><span>본 홈페이지는 회사 정보 확정 전 시안입니다.</span></div></footer>
+<script>
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+</script>
+</body></html>
